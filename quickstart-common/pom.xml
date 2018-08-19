@@ -11,5 +11,11 @@
 
     <artifactId>quickstart-common</artifactId>
 
-
+    <dependencies>
+        <dependency>
+            <groupId>com.codfish</groupId>
+            <artifactId>quickstart-data</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
 </project>
