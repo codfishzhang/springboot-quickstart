@@ -3,15 +3,13 @@ package com.codfish.springbootquickstart.controller;
 import com.codfish.springbootquickstart.request.user.LoginReq;
 import com.codfish.springbootquickstart.response.BaseResponse;
 import com.codfish.springbootquickstart.response.user.LoginResp;
+import com.codfish.springbootquickstart.response.user.UserListResp;
 import com.codfish.springbootquickstart.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 
 
-@Controller
+@RestController
 @RequestMapping("/user")
 public class UserController {
 
@@ -19,16 +17,17 @@ public class UserController {
     private UserService userService;
 
     @PostMapping("/login")
-    @org.springframework.web.bind.annotation.ResponseBody
+    @ResponseBody
     public BaseResponse<LoginResp> login(LoginReq request) {
         BaseResponse<LoginResp> response = userService.login(request);
         return response;
     }
 
     @GetMapping("/userlist")
-    @org.springframework.web.bind.annotation.ResponseBody
-    public BaseResponse<LoginResp> getUserList() {
-        BaseResponse<LoginResp> response =
+    @ResponseBody
+    public BaseResponse<UserListResp> getUserList() {
+        BaseResponse<UserListResp> response = userService.getUserList();
+        return response;
     }
 
 }

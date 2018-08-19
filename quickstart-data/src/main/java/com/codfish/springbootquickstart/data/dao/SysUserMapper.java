@@ -4,7 +4,9 @@ import java.util.List;
 
 import com.codfish.springbootquickstart.data.model.SysUser;
 import com.codfish.springbootquickstart.data.model.SysUserExample;
+import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
+import org.springframework.stereotype.Repository;
 
 public interface SysUserMapper {
     long countByExample(SysUserExample example);

@@ -31,7 +31,7 @@ public class ShiroConfig {
     /**
      * 自定义Realm
      */
-    @Bean(name = "authorizer")
+    @Bean
     public UserRealm userRealm(EhCacheManager cacheManager)
     {
         UserRealm userRealm = new UserRealm();
