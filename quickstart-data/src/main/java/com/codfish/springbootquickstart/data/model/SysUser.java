@@ -11,21 +11,19 @@ public class SysUser {
 
     private String salt;
 
+    private String fullname;
+
     private String phone;
 
     private String email;
 
-    private String fullname;
+    private Long sysDepartmentId;
 
-    private String department;
-
-    private Boolean locked;
+    private Boolean isLocked;
 
     private Date gmtCreate;
 
     private Date gmtModified;
-
-    private Integer sysRoleId;
 
     public Long getId() {
         return id;
@@ -59,6 +57,14 @@ public class SysUser {
         this.salt = salt;
     }
 
+    public String getFullname() {
+        return fullname;
+    }
+
+    public void setFullname(String fullname) {
+        this.fullname = fullname;
+    }
+
     public String getPhone() {
         return phone;
     }
@@ -75,28 +81,20 @@ public class SysUser {
         this.email = email;
     }
 
-    public String getFullname() {
-        return fullname;
+    public Long getSysDepartmentId() {
+        return sysDepartmentId;
     }
 
-    public void setFullname(String fullname) {
-        this.fullname = fullname;
+    public void setSysDepartmentId(Long sysDepartmentId) {
+        this.sysDepartmentId = sysDepartmentId;
     }
 
-    public String getDepartment() {
-        return department;
+    public Boolean getIsLocked() {
+        return isLocked;
     }
 
-    public void setDepartment(String department) {
-        this.department = department;
-    }
-
-    public Boolean getLocked() {
-        return locked;
-    }
-
-    public void setLocked(Boolean locked) {
-        this.locked = locked;
+    public void setIsLocked(Boolean isLocked) {
+        this.isLocked = isLocked;
     }
 
     public Date getGmtCreate() {
@@ -113,13 +111,5 @@ public class SysUser {
 
     public void setGmtModified(Date gmtModified) {
         this.gmtModified = gmtModified;
-    }
-
-    public Integer getSysRoleId() {
-        return sysRoleId;
-    }
-
-    public void setSysRoleId(Integer sysRoleId) {
-        this.sysRoleId = sysRoleId;
     }
 }

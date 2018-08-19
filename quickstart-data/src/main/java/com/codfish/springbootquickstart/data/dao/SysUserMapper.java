@@ -1,8 +1,9 @@
 package com.codfish.springbootquickstart.data.dao;
 
+import java.util.List;
+
 import com.codfish.springbootquickstart.data.model.SysUser;
 import com.codfish.springbootquickstart.data.model.SysUserExample;
-import java.util.List;
 import org.apache.ibatis.annotations.Param;
 
 public interface SysUserMapper {

@@ -6,14 +6,13 @@
     <result column="username" jdbcType="VARCHAR" property="username" />
     <result column="password" jdbcType="VARCHAR" property="password" />
     <result column="salt" jdbcType="VARCHAR" property="salt" />
+    <result column="fullname" jdbcType="VARCHAR" property="fullname" />
     <result column="phone" jdbcType="VARCHAR" property="phone" />
     <result column="email" jdbcType="VARCHAR" property="email" />
-    <result column="fullname" jdbcType="VARCHAR" property="fullname" />
-    <result column="department" jdbcType="VARCHAR" property="department" />
-    <result column="locked" jdbcType="BIT" property="locked" />
+    <result column="sys_department_id" jdbcType="BIGINT" property="sysDepartmentId" />
+    <result column="is_locked" jdbcType="BIT" property="isLocked" />
     <result column="gmt_create" jdbcType="TIMESTAMP" property="gmtCreate" />
     <result column="gmt_modified" jdbcType="TIMESTAMP" property="gmtModified" />
-    <result column="sys_role_id" jdbcType="INTEGER" property="sysRoleId" />
   </resultMap>
   <sql id="Example_Where_Clause">
     <where>
@@ -74,8 +73,8 @@
     </where>
   </sql>
   <sql id="Base_Column_List">
-    id, username, password, salt, phone, email, fullname, department, locked, gmt_create, 
-    gmt_modified, sys_role_id
+    id, username, password, salt, fullname, phone, email, sys_department_id, is_locked, 
+    gmt_create, gmt_modified
   </sql>
   <select id="selectByExample" parameterType="com.codfish.springbootquickstart.data.model.SysUserExample" resultMap="BaseResultMap">
     select
@@ -109,15 +108,13 @@
   </delete>
   <insert id="insert" parameterType="com.codfish.springbootquickstart.data.model.SysUser">
     insert into sys_user (id, username, password, 
-      salt, phone, email, 
-      fullname, department, locked, 
-      gmt_create, gmt_modified, sys_role_id
-      )
+      salt, fullname, phone, 
+      email, sys_department_id, is_locked, 
+      gmt_create, gmt_modified)
     values (#{id,jdbcType=BIGINT}, #{username,jdbcType=VARCHAR}, #{password,jdbcType=VARCHAR}, 
-      #{salt,jdbcType=VARCHAR}, #{phone,jdbcType=VARCHAR}, #{email,jdbcType=VARCHAR}, 
-      #{fullname,jdbcType=VARCHAR}, #{department,jdbcType=VARCHAR}, #{locked,jdbcType=BIT}, 
-      #{gmtCreate,jdbcType=TIMESTAMP}, #{gmtModified,jdbcType=TIMESTAMP}, #{sysRoleId,jdbcType=INTEGER}
-      )
+      #{salt,jdbcType=VARCHAR}, #{fullname,jdbcType=VARCHAR}, #{phone,jdbcType=VARCHAR}, 
+      #{email,jdbcType=VARCHAR}, #{sysDepartmentId,jdbcType=BIGINT}, #{isLocked,jdbcType=BIT}, 
+      #{gmtCreate,jdbcType=TIMESTAMP}, #{gmtModified,jdbcType=TIMESTAMP})
   </insert>
   <insert id="insertSelective" parameterType="com.codfish.springbootquickstart.data.model.SysUser">
     insert into sys_user
@@ -134,29 +131,26 @@
       <if test="salt != null">
         salt,
       </if>
+      <if test="fullname != null">
+        fullname,
+      </if>
       <if test="phone != null">
         phone,
       </if>
       <if test="email != null">
         email,
       </if>
-      <if test="fullname != null">
-        fullname,
+      <if test="sysDepartmentId != null">
+        sys_department_id,
       </if>
-      <if test="department != null">
-        department,
-      </if>
-      <if test="locked != null">
-        locked,
+      <if test="isLocked != null">
+        is_locked,
       </if>
       <if test="gmtCreate != null">
         gmt_create,
       </if>
       <if test="gmtModified != null">
         gmt_modified,
-      </if>
-      <if test="sysRoleId != null">
-        sys_role_id,
       </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides=",">
@@ -172,29 +166,26 @@
       <if test="salt != null">
         #{salt,jdbcType=VARCHAR},
       </if>
+      <if test="fullname != null">
+        #{fullname,jdbcType=VARCHAR},
+      </if>
       <if test="phone != null">
         #{phone,jdbcType=VARCHAR},
       </if>
       <if test="email != null">
         #{email,jdbcType=VARCHAR},
       </if>
-      <if test="fullname != null">
-        #{fullname,jdbcType=VARCHAR},
+      <if test="sysDepartmentId != null">
+        #{sysDepartmentId,jdbcType=BIGINT},
       </if>
-      <if test="department != null">
-        #{department,jdbcType=VARCHAR},
-      </if>
-      <if test="locked != null">
-        #{locked,jdbcType=BIT},
+      <if test="isLocked != null">
+        #{isLocked,jdbcType=BIT},
       </if>
       <if test="gmtCreate != null">
         #{gmtCreate,jdbcType=TIMESTAMP},
       </if>
       <if test="gmtModified != null">
         #{gmtModified,jdbcType=TIMESTAMP},
-      </if>
-      <if test="sysRoleId != null">
-        #{sysRoleId,jdbcType=INTEGER},
       </if>
     </trim>
   </insert>
@@ -219,29 +210,26 @@
       <if test="record.salt != null">
         salt = #{record.salt,jdbcType=VARCHAR},
       </if>
+      <if test="record.fullname != null">
+        fullname = #{record.fullname,jdbcType=VARCHAR},
+      </if>
       <if test="record.phone != null">
         phone = #{record.phone,jdbcType=VARCHAR},
       </if>
       <if test="record.email != null">
         email = #{record.email,jdbcType=VARCHAR},
       </if>
-      <if test="record.fullname != null">
-        fullname = #{record.fullname,jdbcType=VARCHAR},
+      <if test="record.sysDepartmentId != null">
+        sys_department_id = #{record.sysDepartmentId,jdbcType=BIGINT},
       </if>
-      <if test="record.department != null">
-        department = #{record.department,jdbcType=VARCHAR},
-      </if>
-      <if test="record.locked != null">
-        locked = #{record.locked,jdbcType=BIT},
+      <if test="record.isLocked != null">
+        is_locked = #{record.isLocked,jdbcType=BIT},
       </if>
       <if test="record.gmtCreate != null">
         gmt_create = #{record.gmtCreate,jdbcType=TIMESTAMP},
       </if>
       <if test="record.gmtModified != null">
         gmt_modified = #{record.gmtModified,jdbcType=TIMESTAMP},
-      </if>
-      <if test="record.sysRoleId != null">
-        sys_role_id = #{record.sysRoleId,jdbcType=INTEGER},
       </if>
     </set>
     <if test="_parameter != null">
@@ -254,14 +242,13 @@
       username = #{record.username,jdbcType=VARCHAR},
       password = #{record.password,jdbcType=VARCHAR},
       salt = #{record.salt,jdbcType=VARCHAR},
+      fullname = #{record.fullname,jdbcType=VARCHAR},
       phone = #{record.phone,jdbcType=VARCHAR},
       email = #{record.email,jdbcType=VARCHAR},
-      fullname = #{record.fullname,jdbcType=VARCHAR},
-      department = #{record.department,jdbcType=VARCHAR},
-      locked = #{record.locked,jdbcType=BIT},
+      sys_department_id = #{record.sysDepartmentId,jdbcType=BIGINT},
+      is_locked = #{record.isLocked,jdbcType=BIT},
       gmt_create = #{record.gmtCreate,jdbcType=TIMESTAMP},
-      gmt_modified = #{record.gmtModified,jdbcType=TIMESTAMP},
-      sys_role_id = #{record.sysRoleId,jdbcType=INTEGER}
+      gmt_modified = #{record.gmtModified,jdbcType=TIMESTAMP}
     <if test="_parameter != null">
       <include refid="Update_By_Example_Where_Clause" />
     </if>
@@ -278,29 +265,26 @@
       <if test="salt != null">
         salt = #{salt,jdbcType=VARCHAR},
       </if>
+      <if test="fullname != null">
+        fullname = #{fullname,jdbcType=VARCHAR},
+      </if>
       <if test="phone != null">
         phone = #{phone,jdbcType=VARCHAR},
       </if>
       <if test="email != null">
         email = #{email,jdbcType=VARCHAR},
       </if>
-      <if test="fullname != null">
-        fullname = #{fullname,jdbcType=VARCHAR},
+      <if test="sysDepartmentId != null">
+        sys_department_id = #{sysDepartmentId,jdbcType=BIGINT},
       </if>
-      <if test="department != null">
-        department = #{department,jdbcType=VARCHAR},
-      </if>
-      <if test="locked != null">
-        locked = #{locked,jdbcType=BIT},
+      <if test="isLocked != null">
+        is_locked = #{isLocked,jdbcType=BIT},
       </if>
       <if test="gmtCreate != null">
         gmt_create = #{gmtCreate,jdbcType=TIMESTAMP},
       </if>
       <if test="gmtModified != null">
         gmt_modified = #{gmtModified,jdbcType=TIMESTAMP},
-      </if>
-      <if test="sysRoleId != null">
-        sys_role_id = #{sysRoleId,jdbcType=INTEGER},
       </if>
     </set>
     where id = #{id,jdbcType=BIGINT}
@@ -310,14 +294,13 @@
     set username = #{username,jdbcType=VARCHAR},
       password = #{password,jdbcType=VARCHAR},
       salt = #{salt,jdbcType=VARCHAR},
+      fullname = #{fullname,jdbcType=VARCHAR},
       phone = #{phone,jdbcType=VARCHAR},
       email = #{email,jdbcType=VARCHAR},
-      fullname = #{fullname,jdbcType=VARCHAR},
-      department = #{department,jdbcType=VARCHAR},
-      locked = #{locked,jdbcType=BIT},
+      sys_department_id = #{sysDepartmentId,jdbcType=BIGINT},
+      is_locked = #{isLocked,jdbcType=BIT},
       gmt_create = #{gmtCreate,jdbcType=TIMESTAMP},
-      gmt_modified = #{gmtModified,jdbcType=TIMESTAMP},
-      sys_role_id = #{sysRoleId,jdbcType=INTEGER}
+      gmt_modified = #{gmtModified,jdbcType=TIMESTAMP}
     where id = #{id,jdbcType=BIGINT}
   </update>
 </mapper>

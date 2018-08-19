@@ -9,6 +9,9 @@
     <modules>
         <module>quickstart-web</module>
         <module>quickstart-data</module>
+        <module>quickstart-service</module>
+        <module>quickstart-facade</module>
+        <module>quickstart-common</module>
     </modules>
     <packaging>pom</packaging>
 

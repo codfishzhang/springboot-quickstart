@@ -35,6 +35,18 @@
                enableCountByExample="true" enableUpdateByExample="true">
             <property name="useActualColumnNames" value="false"/>
         </table>
+        <table schema="public" tableName="sys_role" enableSelectByExample="true" enableDeleteByExample="true"
+               enableCountByExample="true" enableUpdateByExample="true">
+            <property name="useActualColumnNames" value="false"/>
+        </table>
+        <table schema="public" tableName="sys_resume_type" enableSelectByExample="true" enableDeleteByExample="true"
+               enableCountByExample="true" enableUpdateByExample="true">
+            <property name="useActualColumnNames" value="false"/>
+        </table>
+        <table schema="public" tableName="sys_user_resume_type" enableSelectByExample="true" enableDeleteByExample="true"
+               enableCountByExample="true" enableUpdateByExample="true">
+            <property name="useActualColumnNames" value="false"/>
+        </table>
 
     </context>
 </generatorConfiguration>

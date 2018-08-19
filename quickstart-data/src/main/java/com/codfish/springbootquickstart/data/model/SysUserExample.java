@@ -375,6 +375,76 @@ public class SysUserExample {
             return (Criteria) this;
         }
 
+        public Criteria andFullnameIsNull() {
+            addCriterion("fullname is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andFullnameIsNotNull() {
+            addCriterion("fullname is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andFullnameEqualTo(String value) {
+            addCriterion("fullname =", value, "fullname");
+            return (Criteria) this;
+        }
+
+        public Criteria andFullnameNotEqualTo(String value) {
+            addCriterion("fullname <>", value, "fullname");
+            return (Criteria) this;
+        }
+
+        public Criteria andFullnameGreaterThan(String value) {
+            addCriterion("fullname >", value, "fullname");
+            return (Criteria) this;
+        }
+
+        public Criteria andFullnameGreaterThanOrEqualTo(String value) {
+            addCriterion("fullname >=", value, "fullname");
+            return (Criteria) this;
+        }
+
+        public Criteria andFullnameLessThan(String value) {
+            addCriterion("fullname <", value, "fullname");
+            return (Criteria) this;
+        }
+
+        public Criteria andFullnameLessThanOrEqualTo(String value) {
+            addCriterion("fullname <=", value, "fullname");
+            return (Criteria) this;
+        }
+
+        public Criteria andFullnameLike(String value) {
+            addCriterion("fullname like", value, "fullname");
+            return (Criteria) this;
+        }
+
+        public Criteria andFullnameNotLike(String value) {
+            addCriterion("fullname not like", value, "fullname");
+            return (Criteria) this;
+        }
+
+        public Criteria andFullnameIn(List<String> values) {
+            addCriterion("fullname in", values, "fullname");
+            return (Criteria) this;
+        }
+
+        public Criteria andFullnameNotIn(List<String> values) {
+            addCriterion("fullname not in", values, "fullname");
+            return (Criteria) this;
+        }
+
+        public Criteria andFullnameBetween(String value1, String value2) {
+            addCriterion("fullname between", value1, value2, "fullname");
+            return (Criteria) this;
+        }
+
+        public Criteria andFullnameNotBetween(String value1, String value2) {
+            addCriterion("fullname not between", value1, value2, "fullname");
+            return (Criteria) this;
+        }
+
         public Criteria andPhoneIsNull() {
             addCriterion("phone is null");
             return (Criteria) this;
@@ -515,203 +585,123 @@ public class SysUserExample {
             return (Criteria) this;
         }
 
-        public Criteria andFullnameIsNull() {
-            addCriterion("fullname is null");
+        public Criteria andSysDepartmentIdIsNull() {
+            addCriterion("sys_department_id is null");
             return (Criteria) this;
         }
 
-        public Criteria andFullnameIsNotNull() {
-            addCriterion("fullname is not null");
+        public Criteria andSysDepartmentIdIsNotNull() {
+            addCriterion("sys_department_id is not null");
             return (Criteria) this;
         }
 
-        public Criteria andFullnameEqualTo(String value) {
-            addCriterion("fullname =", value, "fullname");
+        public Criteria andSysDepartmentIdEqualTo(Long value) {
+            addCriterion("sys_department_id =", value, "sysDepartmentId");
             return (Criteria) this;
         }
 
-        public Criteria andFullnameNotEqualTo(String value) {
-            addCriterion("fullname <>", value, "fullname");
+        public Criteria andSysDepartmentIdNotEqualTo(Long value) {
+            addCriterion("sys_department_id <>", value, "sysDepartmentId");
             return (Criteria) this;
         }
 
-        public Criteria andFullnameGreaterThan(String value) {
-            addCriterion("fullname >", value, "fullname");
+        public Criteria andSysDepartmentIdGreaterThan(Long value) {
+            addCriterion("sys_department_id >", value, "sysDepartmentId");
             return (Criteria) this;
         }
 
-        public Criteria andFullnameGreaterThanOrEqualTo(String value) {
-            addCriterion("fullname >=", value, "fullname");
+        public Criteria andSysDepartmentIdGreaterThanOrEqualTo(Long value) {
+            addCriterion("sys_department_id >=", value, "sysDepartmentId");
             return (Criteria) this;
         }
 
-        public Criteria andFullnameLessThan(String value) {
-            addCriterion("fullname <", value, "fullname");
+        public Criteria andSysDepartmentIdLessThan(Long value) {
+            addCriterion("sys_department_id <", value, "sysDepartmentId");
             return (Criteria) this;
         }
 
-        public Criteria andFullnameLessThanOrEqualTo(String value) {
-            addCriterion("fullname <=", value, "fullname");
+        public Criteria andSysDepartmentIdLessThanOrEqualTo(Long value) {
+            addCriterion("sys_department_id <=", value, "sysDepartmentId");
             return (Criteria) this;
         }
 
-        public Criteria andFullnameLike(String value) {
-            addCriterion("fullname like", value, "fullname");
+        public Criteria andSysDepartmentIdIn(List<Long> values) {
+            addCriterion("sys_department_id in", values, "sysDepartmentId");
             return (Criteria) this;
         }
 
-        public Criteria andFullnameNotLike(String value) {
-            addCriterion("fullname not like", value, "fullname");
+        public Criteria andSysDepartmentIdNotIn(List<Long> values) {
+            addCriterion("sys_department_id not in", values, "sysDepartmentId");
             return (Criteria) this;
         }
 
-        public Criteria andFullnameIn(List<String> values) {
-            addCriterion("fullname in", values, "fullname");
+        public Criteria andSysDepartmentIdBetween(Long value1, Long value2) {
+            addCriterion("sys_department_id between", value1, value2, "sysDepartmentId");
             return (Criteria) this;
         }
 
-        public Criteria andFullnameNotIn(List<String> values) {
-            addCriterion("fullname not in", values, "fullname");
+        public Criteria andSysDepartmentIdNotBetween(Long value1, Long value2) {
+            addCriterion("sys_department_id not between", value1, value2, "sysDepartmentId");
             return (Criteria) this;
         }
 
-        public Criteria andFullnameBetween(String value1, String value2) {
-            addCriterion("fullname between", value1, value2, "fullname");
+        public Criteria andIsLockedIsNull() {
+            addCriterion("is_locked is null");
             return (Criteria) this;
         }
 
-        public Criteria andFullnameNotBetween(String value1, String value2) {
-            addCriterion("fullname not between", value1, value2, "fullname");
+        public Criteria andIsLockedIsNotNull() {
+            addCriterion("is_locked is not null");
             return (Criteria) this;
         }
 
-        public Criteria andDepartmentIsNull() {
-            addCriterion("department is null");
+        public Criteria andIsLockedEqualTo(Boolean value) {
+            addCriterion("is_locked =", value, "isLocked");
             return (Criteria) this;
         }
 
-        public Criteria andDepartmentIsNotNull() {
-            addCriterion("department is not null");
+        public Criteria andIsLockedNotEqualTo(Boolean value) {
+            addCriterion("is_locked <>", value, "isLocked");
             return (Criteria) this;
         }
 
-        public Criteria andDepartmentEqualTo(String value) {
-            addCriterion("department =", value, "department");
+        public Criteria andIsLockedGreaterThan(Boolean value) {
+            addCriterion("is_locked >", value, "isLocked");
             return (Criteria) this;
         }
 
-        public Criteria andDepartmentNotEqualTo(String value) {
-            addCriterion("department <>", value, "department");
+        public Criteria andIsLockedGreaterThanOrEqualTo(Boolean value) {
+            addCriterion("is_locked >=", value, "isLocked");
             return (Criteria) this;
         }
 
-        public Criteria andDepartmentGreaterThan(String value) {
-            addCriterion("department >", value, "department");
+        public Criteria andIsLockedLessThan(Boolean value) {
+            addCriterion("is_locked <", value, "isLocked");
             return (Criteria) this;
         }
 
-        public Criteria andDepartmentGreaterThanOrEqualTo(String value) {
-            addCriterion("department >=", value, "department");
+        public Criteria andIsLockedLessThanOrEqualTo(Boolean value) {
+            addCriterion("is_locked <=", value, "isLocked");
             return (Criteria) this;
         }
 
-        public Criteria andDepartmentLessThan(String value) {
-            addCriterion("department <", value, "department");
+        public Criteria andIsLockedIn(List<Boolean> values) {
+            addCriterion("is_locked in", values, "isLocked");
             return (Criteria) this;
         }
 
-        public Criteria andDepartmentLessThanOrEqualTo(String value) {
-            addCriterion("department <=", value, "department");
+        public Criteria andIsLockedNotIn(List<Boolean> values) {
+            addCriterion("is_locked not in", values, "isLocked");
             return (Criteria) this;
         }
 
-        public Criteria andDepartmentLike(String value) {
-            addCriterion("department like", value, "department");
+        public Criteria andIsLockedBetween(Boolean value1, Boolean value2) {
+            addCriterion("is_locked between", value1, value2, "isLocked");
             return (Criteria) this;
         }
 
-        public Criteria andDepartmentNotLike(String value) {
-            addCriterion("department not like", value, "department");
-            return (Criteria) this;
-        }
-
-        public Criteria andDepartmentIn(List<String> values) {
-            addCriterion("department in", values, "department");
-            return (Criteria) this;
-        }
-
-        public Criteria andDepartmentNotIn(List<String> values) {
-            addCriterion("department not in", values, "department");
-            return (Criteria) this;
-        }
-
-        public Criteria andDepartmentBetween(String value1, String value2) {
-            addCriterion("department between", value1, value2, "department");
-            return (Criteria) this;
-        }
-
-        public Criteria andDepartmentNotBetween(String value1, String value2) {
-            addCriterion("department not between", value1, value2, "department");
-            return (Criteria) this;
-        }
-
-        public Criteria andLockedIsNull() {
-            addCriterion("locked is null");
-            return (Criteria) this;
-        }
-
-        public Criteria andLockedIsNotNull() {
-            addCriterion("locked is not null");
-            return (Criteria) this;
-        }
-
-        public Criteria andLockedEqualTo(Boolean value) {
-            addCriterion("locked =", value, "locked");
-            return (Criteria) this;
-        }
-
-        public Criteria andLockedNotEqualTo(Boolean value) {
-            addCriterion("locked <>", value, "locked");
-            return (Criteria) this;
-        }
-
-        public Criteria andLockedGreaterThan(Boolean value) {
-            addCriterion("locked >", value, "locked");
-            return (Criteria) this;
-        }
-
-        public Criteria andLockedGreaterThanOrEqualTo(Boolean value) {
-            addCriterion("locked >=", value, "locked");
-            return (Criteria) this;
-        }
-
-        public Criteria andLockedLessThan(Boolean value) {
-            addCriterion("locked <", value, "locked");
-            return (Criteria) this;
-        }
-
-        public Criteria andLockedLessThanOrEqualTo(Boolean value) {
-            addCriterion("locked <=", value, "locked");
-            return (Criteria) this;
-        }
-
-        public Criteria andLockedIn(List<Boolean> values) {
-            addCriterion("locked in", values, "locked");
-            return (Criteria) this;
-        }
-
-        public Criteria andLockedNotIn(List<Boolean> values) {
-            addCriterion("locked not in", values, "locked");
-            return (Criteria) this;
-        }
-
-        public Criteria andLockedBetween(Boolean value1, Boolean value2) {
-            addCriterion("locked between", value1, value2, "locked");
-            return (Criteria) this;
-        }
-
-        public Criteria andLockedNotBetween(Boolean value1, Boolean value2) {
-            addCriterion("locked not between", value1, value2, "locked");
+        public Criteria andIsLockedNotBetween(Boolean value1, Boolean value2) {
+            addCriterion("is_locked not between", value1, value2, "isLocked");
             return (Criteria) this;
         }
 
@@ -832,66 +822,6 @@ public class SysUserExample {
 
         public Criteria andGmtModifiedNotBetween(Date value1, Date value2) {
             addCriterion("gmt_modified not between", value1, value2, "gmtModified");
-            return (Criteria) this;
-        }
-
-        public Criteria andSysRoleIdIsNull() {
-            addCriterion("sys_role_id is null");
-            return (Criteria) this;
-        }
-
-        public Criteria andSysRoleIdIsNotNull() {
-            addCriterion("sys_role_id is not null");
-            return (Criteria) this;
-        }
-
-        public Criteria andSysRoleIdEqualTo(Integer value) {
-            addCriterion("sys_role_id =", value, "sysRoleId");
-            return (Criteria) this;
-        }
-
-        public Criteria andSysRoleIdNotEqualTo(Integer value) {
-            addCriterion("sys_role_id <>", value, "sysRoleId");
-            return (Criteria) this;
-        }
-
-        public Criteria andSysRoleIdGreaterThan(Integer value) {
-            addCriterion("sys_role_id >", value, "sysRoleId");
-            return (Criteria) this;
-        }
-
-        public Criteria andSysRoleIdGreaterThanOrEqualTo(Integer value) {
-            addCriterion("sys_role_id >=", value, "sysRoleId");
-            return (Criteria) this;
-        }
-
-        public Criteria andSysRoleIdLessThan(Integer value) {
-            addCriterion("sys_role_id <", value, "sysRoleId");
-            return (Criteria) this;
-        }
-
-        public Criteria andSysRoleIdLessThanOrEqualTo(Integer value) {
-            addCriterion("sys_role_id <=", value, "sysRoleId");
-            return (Criteria) this;
-        }
-
-        public Criteria andSysRoleIdIn(List<Integer> values) {
-            addCriterion("sys_role_id in", values, "sysRoleId");
-            return (Criteria) this;
-        }
-
-        public Criteria andSysRoleIdNotIn(List<Integer> values) {
-            addCriterion("sys_role_id not in", values, "sysRoleId");
-            return (Criteria) this;
-        }
-
-        public Criteria andSysRoleIdBetween(Integer value1, Integer value2) {
-            addCriterion("sys_role_id between", value1, value2, "sysRoleId");
-            return (Criteria) this;
-        }
-
-        public Criteria andSysRoleIdNotBetween(Integer value1, Integer value2) {
-            addCriterion("sys_role_id not between", value1, value2, "sysRoleId");
             return (Criteria) this;
         }
     }
